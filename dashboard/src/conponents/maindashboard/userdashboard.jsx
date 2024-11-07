@@ -101,7 +101,7 @@ export default function Userdashboard() {
               <th className="text-left p-3">People Visited</th>
               <th className="text-left p-3">TIMELINE</th>
               <th className="text-left p-3">INFLUENCER</th>
-              <th className="text-left p-3">Insight</th>
+              <th className="text-left p-3">Weekly Insight</th>
             </tr>
           </thead>
           <tbody>
@@ -131,7 +131,7 @@ export default function Userdashboard() {
                     </div>
                   </div>
                 </td>
-                <td className="p-3">{campaign.totalMoneySpent}</td>
+                <td className="p-3">${campaign.totalMoneySpent}</td>
                 <td className="p-3">{campaign.totalPeopleVisited}</td>
                 <td className="p-3">{campaign.timeline}</td>
                 <td className="p-3">
