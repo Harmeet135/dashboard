@@ -10,10 +10,10 @@ const jsonData = fs.readFileSync('customerdata.json', 'utf8');
 const data = JSON.parse(jsonData);
 
 const processedData = data.map(hotel => {
+  
   const totalTimeSpent = hotel.areas.reduce((sum, area) => sum + area.timeSpent, 0);
   const totalMoneySpent = hotel.segments.reduce((sum, segment) => sum + (segment.revenue || 0), 0);
   const totalPeopleVisited = hotel.zones.reduce((sum, zone) => sum + (zone.value || 0), 0);
-  console.log(totalMoneySpent,totalPeopleVisited)
   return {
       id: hotel.id,
       hotel: hotel.hotel,
@@ -23,9 +23,10 @@ const processedData = data.map(hotel => {
       date: hotel.date,
       budget: hotel.budget,
       timeline: hotel.timeline,
-      activeCampaign,
-      pauseCampaign,
-      terminateCampaign,
+      activeCampaign : hotel.activeCampaign,
+      pauseCampaign : hotel.pauseCampaign,
+      terminateCampaign : hotel.pauseCampaign,
+      totalCampaign : hotel.totalCampaign,
       totalMoneySpent,
       totalPeopleVisited,
       metrics: hotel.metrics,
@@ -37,17 +38,19 @@ const processedData = data.map(hotel => {
 });
 
 
-
-// Endpoint to serve customer activity data
 app.get('/api/customer-activity', (req, res) => {
-    res.json({ hotels: processedData });
+  const totalCampaignCount = processedData.reduce((sum, hotel) => sum + hotel.totalCampaign, 0);
+
+  res.json({
+      totalCampaign: totalCampaignCount,
+      hotels: processedData
+  });
 });
 
 app.get('/api/customer-activity/:hotelId', (req, res) => {
   const { hotelId } = req.params;
-  console.log(`Looking for hotel with id: ${hotelId}`); // Debugging log
+  console.log(`Looking for hotel with id: ${hotelId}`);
 
-  // Convert hotelId to an integer to compare it correctly with the data
   const hotel = processedData.find(h => h.id === parseInt(hotelId)); 
 
   if (hotel) {
