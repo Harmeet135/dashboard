@@ -55,7 +55,7 @@ export default function HotelDetails() {
       </div>
 
       <div className="flex space-x-1 border-b">
-        {["Traffic", "sales", "customerSatisfaction"].map((tab) => (
+        {["Traffic", "Stuff Bought", "option3"].map((tab) => (
           <button
             key={tab}
             className={`px-4 py-2 text-sm font-medium ${

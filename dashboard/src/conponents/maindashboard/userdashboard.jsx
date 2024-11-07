@@ -44,13 +44,13 @@ export default function Userdashboard() {
               color: "blue",
             },
             {
-              title: "Active Campaign",
+              title: "Active Hotels",
               value: hotelsVisisted.length,
               icon: "🔥",
               color: "orange",
             },
-            { title: "Pause Campaign", value: 0, icon: "⏸️", color: "yellow" },
-            { title: "Terminate Campaign", value: 0, icon: "❌", color: "red" },
+            { title: "Pause Hotels", value: 0, icon: "⏸️", color: "yellow" },
+            { title: "Terminate Hotels", value: 0, icon: "❌", color: "red" },
           ].map((item) => (
             <div key={item.title} className="bg-white rounded-lg shadow p-6">
               <div className="flex items-center gap-4">

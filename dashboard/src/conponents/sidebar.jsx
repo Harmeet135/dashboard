@@ -17,7 +17,7 @@ function Sidebar() {
 
   return (
     <motion.div className="sidebar" animate={{ width: isCollapsed ? 80 : 200 }} layout>
-      <div className="sticky top-2">
+      <div className="sticky top-4">
       <h3>Logo</h3>
       <button className="sidebar__collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>
         {isCollapsed ? <LuChevronRight /> : <LuChevronLeft />}

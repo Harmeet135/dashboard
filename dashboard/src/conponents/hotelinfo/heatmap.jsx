@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 const getOpacityClass = (value) => {
   if (value >= 80) return "bg-blue-500/90"
@@ -9,7 +11,6 @@ const getOpacityClass = (value) => {
 }
 
 export default function HotelHeatMap({ hoteldata }) {
-  const [tooltip, setTooltip] = useState({ show: false, content: "", x: 0, y: 0 })
   const [mostActiveArea, setMostActiveArea] = useState(null)
   const [leastActiveArea, setLeastActiveArea] = useState(null)
 
@@ -23,24 +24,12 @@ export default function HotelHeatMap({ hoteldata }) {
     }
   }, [hotelAreas])
 
-  const handleMouseEnter = (e, area, activityLevel) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    setTooltip({
-      show: true,
-      content: `${area}: ${activityLevel}% Activity`,
-      x: rect.left + window.scrollX,
-      y: rect.top + window.scrollY,
-    })
-  }
-
-  const handleMouseLeave = () => {
-    setTooltip({ show: false, content: "", x: 0, y: 0 })
-  }
-
   return (
     <>
+      {/* Tooltip with custom class */}
+      <Tooltip id="my-tooltip" offset={40}/>
 
-<div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-6">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-6">
         {mostActiveArea && (
           <div className="bg-white p-6 rounded-lg shadow w-full max-w-xs text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
@@ -77,8 +66,9 @@ export default function HotelHeatMap({ hoteldata }) {
                 className={`h-24 rounded-lg p-2 flex items-center justify-center text-sm font-medium text-gray-800 cursor-pointer transition-all duration-200 hover:scale-105 ${getOpacityClass(
                   activityLevel
                 )}`}
-                onMouseEnter={(e) => handleMouseEnter(e, area, activityLevel)}
-                onMouseLeave={handleMouseLeave}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={`${area}: ${activityLevel}% activity`}
+                data-tooltip-place="top"
               >
                 {area}
               </div>
@@ -91,21 +81,7 @@ export default function HotelHeatMap({ hoteldata }) {
             <span className="text-sm text-gray-600">High Activity</span>
           </div>
         </div>
-
-        {tooltip.show && (
-          <div
-            className="fixed z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg pointer-events-none"
-            style={{
-              left: `${tooltip.x}px`,
-              top: `${tooltip.y - 40}px`,
-            }}
-          >
-            {tooltip.content}
-          </div>
-        )}
       </div>
-
-     
     </>
   )
 }
