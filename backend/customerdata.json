@@ -69,7 +69,6 @@
       { "area": "Business Center", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 32 },
       { "area": "Gift Shop", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 32 }
     ],
-    
     "metrics": [
       { "icon": "👣", "label": "Foot Traffic", "value": "450,000" },
       { "icon": "💵", "label": "Sales Revenue", "value": "$1,200,000" },
@@ -93,6 +92,53 @@
       { "age": "45-54", "male": 10, "female": 8 },
       { "age": "55-64", "male": 5, "female": 3 },
       { "age": "+64", "male": 2, "female": 2 }
+    ]
+  },
+  {
+    "id": 3,
+    "hotel": "Hotel Emerald",
+    "icon": "E",
+    "status": "Active",
+    "date": "Today, August 20, 2023 (10:56 PM)",
+    "timeline": "Jun 12, '24 → Aug 14, '24",
+    "areas": [
+      { "area": "Lobby", "timeSpent": 160, "moneySpent": 350, "activityLevel": 70 },
+      { "area": "Gym", "timeSpent": 75, "moneySpent": 300, "activityLevel": 80 },
+      { "area": "Spa", "timeSpent": 150, "moneySpent": 1200, "activityLevel": 65 },
+      { "area": "Restaurant", "timeSpent": 200, "moneySpent": 1100, "activityLevel": 60 },
+      { "area": "Bar", "timeSpent": 150, "moneySpent": 900, "activityLevel": 50 },
+      { "area": "Pool", "timeSpent": 170, "moneySpent": 950, "activityLevel": 30 },
+      { "area": "Garden", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 40 },
+      { "area": "Parking", "timeSpent": 180, "moneySpent": 950, "activityLevel": 90 },
+      { "area": "Conference A", "timeSpent": 180, "moneySpent": 950, "activityLevel": 25 },
+      { "area": "Conference B", "timeSpent": 180, "moneySpent": 950, "activityLevel": 80 },
+      { "area": "Business Center", "timeSpent": 180, "moneySpent": 950, "activityLevel": 35 },
+      { "area": "Gift Shop", "timeSpent": 180, "moneySpent": 950, "activityLevel": 20 }
+    ],
+    "metrics": [
+      { "icon": "👣", "label": "Foot Traffic", "value": "600,000" },
+      { "icon": "💵", "label": "Sales Revenue", "value": "$1,800,000" },
+      { "icon": "📊", "label": "Customer Satisfaction", "value": "90%" },
+      { "icon": "🛍️", "label": "Items Purchased", "value": "300,000" }
+    ],
+    "zones": [
+      { "label": "East Wing", "value": 130000 },
+      { "label": "West Wing", "value": 140000 },
+      { "label": "Central Plaza", "value": 250000 }
+    ],
+    "segments": [
+      { "segment": "Young Adults", "activityLevel": "Very High", "revenue": 1000000 },
+      { "segment": "Families", "activityLevel": "High", "revenue": 700000 },
+      { "segment": "Tourists", "activityLevel": "Low", "revenue": 200000 },
+      { "segment": "Couples", "activityLevel": "Medium", "revenue": 800000 }
+    ],
+    "ageGenderDistribution": [
+      { "age": "15-24", "male": 30, "female": 25 },
+      { "age": "25-34", "male": 35, "female": 30 },
+      { "age": "35-44", "male": 25, "female": 20 },
+      { "age": "45-54", "male": 15, "female": 10 },
+      { "age": "55-64", "male": 10, "female": 8 },
+      { "age": "+64", "male": 5, "female": 4 }
     ]
   }
 ]
