@@ -34,7 +34,10 @@
     "segments": [
       { "segment": "Teenagers", "activityLevel": "High", "revenue": 300000 },
       { "segment": "Families", "activityLevel": "Medium", "revenue": 500000 },
-      { "segment": "Tourists", "activityLevel": "Low", "revenue": 100000 }
+      { "segment": "Tourists", "activityLevel": "Low", "revenue": 100000 },
+      { "segment": "Couples", "activityLevel": "Medium", "revenue": 170000 },
+      { "segment": "Young Adults", "activityLevel": "Very High", "revenue": 1200000 },
+      { "segment": "Kids", "activityLevel": "Low", "revenue": 20000 }
     ],
     "ageGenderDistribution": [
       { "age": "15-24", "male": 40, "female": 25 },

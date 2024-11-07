@@ -2,30 +2,28 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import HotelHeaTMap from "./heatmap";
 import { IoIosArrowBack } from "react-icons/io";
+import AudienceAgeChart from "./agechat";
+import RevenueChart from "./spendchart";
+import axios from "axios";
 
 export default function HotelDetails() {
   const { hotelId } = useParams();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("Traffic");
 
-  const [hoteldata, sethoteldata] = useState(null);
+  const [hoteldata, setHotelData] = useState(null);
 
   useEffect(() => {
-    const fetchhoteldata = async () => {
+    const fetchHotelData = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:3000/api/customer-activity/${hotelId}`
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const data = await response.json();
-        sethoteldata(data);
+       const response = await axios.get(`${import.meta.env.VITE_API_URL}/customer-activity/${hotelId}`)
+        setHotelData(response.data);
       } catch (error) {
-        console.error("Error fetching mall data:", error);
+        console.error("Error fetching hotel data:", error);
       }
     };
-    fetchhoteldata();
+
+    fetchHotelData();
   }, [hotelId]);
 
   if (!hoteldata) {
@@ -141,6 +139,16 @@ export default function HotelDetails() {
           </table>
         </div>
       </div>
+      <div className="flex md:flex-row flex-col flex-  gap-6">
+  <div className="w-full md:w-3/4">
+    <AudienceAgeChart hoteldata={hoteldata} />
+  </div>
+  <div className="w-full md:w-3/4">
+    <RevenueChart hoteldata={hoteldata} />
+  </div>
+</div>
+
+  
     </div>
   );
 }

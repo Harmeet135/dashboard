@@ -8,9 +8,7 @@ export default function Userdashboard() {
   const [hotelsVisisted, setHotelsVisisted] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the backend API using Axios
-    axios
-      .get("http://localhost:3000/api/customer-activity")
+    axios.get(`${import.meta.env.VITE_API_URL}/customer-activity/`)
       .then((response) => {
         console.log(response.data.hotels.length)
         setHotelsVisisted(response.data.hotels);
@@ -26,7 +24,7 @@ export default function Userdashboard() {
         <div>
           <h1 className="text-2xl font-semibold">Hotels List</h1>
           <p className="text-sm text-gray-500">
-            See how many hotels data you have
+            See  the weekly insight of the hotels registered have
           </p>
         </div>
         <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
@@ -100,7 +98,7 @@ export default function Userdashboard() {
               <th className="text-left p-3">Total Spent</th>
               <th className="text-left p-3">People Visited</th>
               <th className="text-left p-3">TIMELINE</th>
-              <th className="text-left p-3">INFLUENCER</th>
+              <th className="text-left p-3 md:block hidden">INFLUENCER</th>
               <th className="text-left p-3">Weekly Insight</th>
             </tr>
           </thead>
@@ -134,7 +132,7 @@ export default function Userdashboard() {
                 <td className="p-3">${campaign.totalMoneySpent}</td>
                 <td className="p-3">{campaign.totalPeopleVisited}</td>
                 <td className="p-3">{campaign.timeline}</td>
-                <td className="p-3">
+                <td className="p-3 md:block hidden">
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
                       <div

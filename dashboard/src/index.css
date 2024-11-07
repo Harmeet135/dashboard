@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-
 body {
     padding: 0;
     margin: 0;
@@ -22,88 +21,9 @@ body {
     display: flex;
 }
 
-.sidebar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background-color: #fefefe;
-    padding: 24px 16px;
-}
-
-.sidebar-item__collapsed {
-    width: 80px;
-}
-
-.sidebar__collapse-button {
-    cursor: pointer;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 16px;
-    background-color: #fefefe;
-    border: 1px solid #a9aeb4;
-    right: -28px;
-    top: 16px;
-    z-index: 10;
-}
-
-.sidebar-item {
-    position: relative;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    cursor: pointer;
-    font-weight: 500;
-    color: #333;
-    transition: all 0.4s ease;
-}
-
-.sidebar-item__active {
-    transform: scale(1);
-    color: #333;
-}
-
-.sidebar-item__active-bg {
-    position: absolute;
-    inset: 0px;
-    border-radius: 8px;
-    color: #333;
-    background-color: #f5f5f5;
-}
-
-.sidebar-item__icon {
-    position: relative;
-    display: flex;
-}
-
-.sidebar-item__title {
-    position: relative;
-}
-
 .main-content {
     background-color: #f5f5f5;
     color: #333;
     flex-grow: 1;
     padding: 32px;
 }
-
-
-.custom-tooltip {
-    background-color: #1a202c; /* Dark background color */
-    color: #f7fafc; /* Light text color */
-    padding: 8px 12px; /* Padding around the tooltip content */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 0.875rem; /* Smaller font size */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
-    transition: opacity 0.2s ease; /* Smooth fade-in effect */
-  }
-  
-  .custom-tooltip::after {
-    border-top-color: #1a202c; /* Tooltip arrow color matching background */
-  }
