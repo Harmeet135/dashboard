@@ -1,10 +1,10 @@
 # Customer Activity Dashboard
 
-This is a full-stack web application that visualizes customer activity data across multiple hotel areas. The dashboard displays key metrics such as foot traffic, sales revenue, and customer satisfaction. It integrates both the backend and frontend to provide a seamless experience in monitoring and analyzing hotel performance.
+This is a full-stack web application that visualizes customer activity data across multiple hotel areas. The dashboard displays key metrics such as sales revenue, and customer satisfaction. It integrates both the backend and frontend to provide a seamless experience in monitoring and analyzing hotel performance.
 
 ## Features
 - Visualizes customer activity in hotel areas using charts.
-- Displays key metrics such as foot traffic, sales revenue, customer satisfaction, and items purchased.
+- Displays key metrics such as sales revenue, customer satisfaction, and items purchased.
 - Provides detailed insights for each hotel and its respective areas.
 - Uses a heatmap to represent activity levels across different hotel zones.
 - Responsive design for an optimal user experience across devices.
