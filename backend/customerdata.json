@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "hotel": "Hotel Sunshine",
+    "icon": "S",
+    "status": "Active",
+    "date": "Today, August 20, 2021 (10:56 PM)",
+    "budget": "8,000,230",
+    "timeline": "Jun 12, '24 → Aug 14, '24",
+    "metrics": [
+      { "icon": "👣", "label": "Foot Traffic", "value": "500,000" },
+      { "icon": "💵", "label": "Sales Revenue", "value": "$1,500,000" },
+      { "icon": "📊", "label": "Customer Satisfaction", "value": "89%" },
+      { "icon": "🛍️", "label": "Items Purchased", "value": "250,000" }
+    ],
+    "zones": [
+      { "label": "East Wing", "value": "150,000 visits" },
+      { "label": "West Wing", "value": "120,000 visits" },
+      { "label": "Central Plaza", "value": "230,000 visits" }
+    ],
+    "segments": [
+      { "segment": "Teenagers", "activityLevel": "High", "revenue": "$300,000" },
+      { "segment": "Families", "activityLevel": "Medium", "revenue": "$500,000" },
+      { "segment": "Tourists", "activityLevel": "Low", "revenue": "$100,000" }
+    ],
+    "ageGenderDistribution": [
+      { "age": "15-24", "male": 40, "female": 25 },
+      { "age": "25-34", "male": 35, "female": 30 },
+      { "age": "35-44", "male": 25, "female": 20 },
+      { "age": "45-54", "male": 15, "female": 10 },
+      { "age": "55-64", "male": 10, "female": 8 },
+      { "age": "+64", "male": 5, "female": 4 }
+    ]
+  },
+  {
+    "id": 2,
+    "hotel": "Hotel Rainforest",
+    "icon": "R",
+    "status": "Active",
+    "date": "Today, August 20, 2021 (10:56 PM)",
+    "budget": "8,000,230",
+    "timeline": "Jun 12, '24 → Aug 14, '24",
+    "metrics": [
+      { "icon": "👣", "label": "Foot Traffic", "value": "450,000" },
+      { "icon": "💵", "label": "Sales Revenue", "value": "$1,200,000" },
+      { "icon": "📊", "label": "Customer Satisfaction", "value": "85%" },
+      { "icon": "🛍️", "label": "Items Purchased", "value": "220,000" }
+    ],
+    "zones": [
+      { "label": "Lobby", "value": "150,000 visits" },
+      { "label": "Gym", "value": "120,000 visits" },
+      { "label": "Spa", "value": "230,000 visits" }
+    ],
+    "segments": [
+      { "segment": "Young Adults", "activityLevel": "High", "revenue": "$400,000" },
+      { "segment": "Couples", "activityLevel": "Medium", "revenue": "$600,000" },
+      { "segment": "Tourists", "activityLevel": "Low", "revenue": "$200,000" }
+    ],
+    "ageGenderDistribution": [
+      { "age": "15-24", "male": 35, "female": 30 },
+      { "age": "25-34", "male": 30, "female": 25 },
+      { "age": "35-44", "male": 20, "female": 15 },
+      { "age": "45-54", "male": 10, "female": 8 },
+      { "age": "55-64", "male": 5, "female": 3 },
+      { "age": "+64", "male": 2, "female": 2 }
+    ]
+  }
+]
