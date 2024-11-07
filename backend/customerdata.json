@@ -4,9 +4,25 @@
     "hotel": "Hotel Sunshine",
     "icon": "S",
     "status": "Active",
-    "date": "Today, August 20, 2021 (10:56 PM)",
-    "budget": "8,000,230",
+    "date": "Today, August 20, 2024 (10:56 PM)",
     "timeline": "Jun 12, '24 → Aug 14, '24",
+    "activeCampaign" : 2,
+    "pauseCampaign": 0,
+    "terminateCampaign": 0,
+    "areas": [
+      { "area": "Lobby", "timeSpent": 150, "moneySpent": 300, "activityLevel": 85 },
+      { "area": "Gym", "timeSpent": 60, "moneySpent": 200, "activityLevel": 75 },
+      { "area": "Spa", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 80 },
+      { "area": "Restaurant", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 14 },
+      { "area": "Bar", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 40 },
+      { "area": "Pool", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 3 },
+      { "area": "Garden", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 27 },
+      { "area": "Parking", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 95 },
+      { "area": "Conference A", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 40 },
+      { "area": "Conference B", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 78 },
+      { "area": "Business Center", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 32 },
+      { "area": "Gift Shop", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 80 }
+    ],
     "metrics": [
       { "icon": "👣", "label": "Foot Traffic", "value": "500,000" },
       { "icon": "💵", "label": "Sales Revenue", "value": "$1,500,000" },
@@ -14,14 +30,14 @@
       { "icon": "🛍️", "label": "Items Purchased", "value": "250,000" }
     ],
     "zones": [
-      { "label": "East Wing", "value": "150,000 visits" },
-      { "label": "West Wing", "value": "120,000 visits" },
-      { "label": "Central Plaza", "value": "230,000 visits" }
+      { "label": "East Wing", "value": 150303 },
+      { "label": "West Wing", "value": 20000 },
+      { "label": "Central Plaza", "value": 230000 }
     ],
     "segments": [
-      { "segment": "Teenagers", "activityLevel": "High", "revenue": "$300,000" },
-      { "segment": "Families", "activityLevel": "Medium", "revenue": "$500,000" },
-      { "segment": "Tourists", "activityLevel": "Low", "revenue": "$100,000" }
+      { "segment": "Teenagers", "activityLevel": "High", "revenue": 300000 },
+      { "segment": "Families", "activityLevel": "Medium", "revenue": 500000 },
+      { "segment": "Tourists", "activityLevel": "Low", "revenue": 100000 }
     ],
     "ageGenderDistribution": [
       { "age": "15-24", "male": 40, "female": 25 },
@@ -38,8 +54,22 @@
     "icon": "R",
     "status": "Active",
     "date": "Today, August 20, 2021 (10:56 PM)",
-    "budget": "8,000,230",
     "timeline": "Jun 12, '24 → Aug 14, '24",
+    "areas": [
+      { "area": "Lobby", "timeSpent": 150, "moneySpent": 300, "activityLevel": 40 },
+      { "area": "Gym", "timeSpent": 60, "moneySpent": 200, "activityLevel": 12 },
+      { "area": "Spa", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 80 },
+      { "area": "Restaurant", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 14 },
+      { "area": "Bar", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 40 },
+      { "area": "Pool", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 3 },
+      { "area": "Garden", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 27 },
+      { "area": "Parking", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 78 },
+      { "area": "Conference A", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 40 },
+      { "area": "Conference B", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 80 },
+      { "area": "Business Center", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 32 },
+      { "area": "Gift Shop", "timeSpent": 180, "moneySpent": 1000, "activityLevel": 32 }
+    ],
+    
     "metrics": [
       { "icon": "👣", "label": "Foot Traffic", "value": "450,000" },
       { "icon": "💵", "label": "Sales Revenue", "value": "$1,200,000" },
@@ -47,14 +77,14 @@
       { "icon": "🛍️", "label": "Items Purchased", "value": "220,000" }
     ],
     "zones": [
-      { "label": "Lobby", "value": "150,000 visits" },
-      { "label": "Gym", "value": "120,000 visits" },
-      { "label": "Spa", "value": "230,000 visits" }
+      { "label": "Lobby", "value": 150000 },
+      { "label": "Gym", "value": 120000},
+      { "label": "Spa", "value": 230000 }
     ],
     "segments": [
-      { "segment": "Young Adults", "activityLevel": "High", "revenue": "$400,000" },
-      { "segment": "Couples", "activityLevel": "Medium", "revenue": "$600,000" },
-      { "segment": "Tourists", "activityLevel": "Low", "revenue": "$200,000" }
+      { "segment": "Young Adults", "activityLevel": "High", "revenue": 400000 },
+      { "segment": "Couples", "activityLevel": "Medium", "revenue": 600000 },
+      { "segment": "Tourists", "activityLevel": "Low", "revenue": 200000 }
     ],
     "ageGenderDistribution": [
       { "age": "15-24", "male": 35, "female": 30 },

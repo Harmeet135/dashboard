@@ -1,4 +1,3 @@
-// src/Sidebar.js
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { LuHome, LuMail, LuFolderClosed, LuStickyNote, LuBell, LuChevronRight, LuChevronLeft } from "react-icons/lu";
@@ -17,7 +16,8 @@ function Sidebar() {
   const [activeTab, setActiveTab] = useState(SIDEBAR_ITEMS[0].id);
 
   return (
-    <motion.div className="sidebar" animate={{ width: isCollapsed ? 80 : 280 }} layout>
+    <motion.div className="sidebar" animate={{ width: isCollapsed ? 80 : 200 }} layout>
+      <div className="sticky top-2">
       <h3>Logo</h3>
       <button className="sidebar__collapse-button" onClick={() => setIsCollapsed(!isCollapsed)}>
         {isCollapsed ? <LuChevronRight /> : <LuChevronLeft />}
@@ -31,6 +31,7 @@ function Sidebar() {
           setActiveTab={setActiveTab}
         />
       ))}
+      </div>
     </motion.div>
   );
 }
